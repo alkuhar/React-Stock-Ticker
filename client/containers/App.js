@@ -9,9 +9,10 @@ module.exports = React.createClass({
         setInterval(this.updateStocks, (ping > 5000 ? ping : 7500));
     },
     getInitialState() {
+        var obj = { "id": "304466804484872" ,"t" : "GOOG" ,"e" : "NASDAQ" ,"l" : "682.40" ,"l_fix" : "682.40" ,"l_cur" : "682.40" ,"s": "0" ,"ltt":"4:00PM EST" ,"lt" : "Feb 12, 4:00PM EST" ,"lt_dts" : "2016-02-12T16:00:02Z" ,"c" : "-0.71" ,"c_fix" : "-0.71" ,"cp" : "-0.10" ,"cp_fix" : "-0.10" ,"ccol" : "chr" ,"pcls_fix" : "683.11" };
         return {
             symbol: '',
-            stocks: []
+            stocks: [obj]
         };
     },
     handleChange(e) {
