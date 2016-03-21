@@ -16,24 +16,11 @@ app.use(express.static(static_path))
         });
     })
     .get('/v1/stocks/:stock_tickers', function (req, res) {
-      gfinance.get(req.params.stock_tickers, function (err, apires) {
-        res.json({ stocks: apires });
-      });
+        gfinance.get(req.params.stock_tickers, function (err, apires) {
+            res.json({ stocks: apires });
+        });
     })
     .listen(process.env.PORT || 8080, function (err) {
         if (err) { console.log(err) };
         console.log('Listening at localhost:8080');
     });
-
-if (isDevelopment) {
-    var config = require('./webpack.config');
-    var WebpackDevServer = require('webpack-dev-server');
-
-    new WebpackDevServer(webpack(config), {
-        publicPath: config.output.publicPath,
-        hot: true
-    }).listen(3000, 'localhost', function (err, result) {
-        if (err) { console.log(err) }
-        console.log('Listening at localhost:3000');
-    });
-}

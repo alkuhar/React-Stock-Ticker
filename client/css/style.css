@@ -51,17 +51,17 @@ a:hover {
 .container-1 input#search::-webkit-input-placeholder {
     color: #65737e;
 }
- 
+
 .container-1 input#search:-moz-placeholder { /* Firefox 18- */
-    color: #65737e;  
+    color: #65737e;
 }
- 
+
 .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
-    color: #65737e;  
+    color: #65737e;
 }
- 
-.container-1 input#search:-ms-input-placeholder {  
-    color: #65737e;  
+
+.container-1 input#search:-ms-input-placeholder {
+    color: #65737e;
 }
 
 .container-1 .search-icon {
@@ -89,10 +89,17 @@ a:hover {
     height: 100px;
     margin: 5px;
     position: relative;
-    vertical-align: middle;
-    text-align: center;
+    white-space: nowrap;
     width: 225px;
-    vertical-align: middle;
+}
+
+#a-sym {
+    margin-left: 35%;
+}
+
+#d-sym {
+    margin-left: 10px;
+    padding-bottom: 20px;
 }
 
 .footer-section {
